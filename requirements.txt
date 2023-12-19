@@ -1,0 +1,13 @@
+python==3.9.12
+vllm
+modelscope
+tiktoken
+pdfplumber
+PdfReader
+pdfplumber
+PyPDF2
+langchain
+jieba
+rank_bm25
+sentence-transformers
+faiss-cpu
