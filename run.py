@@ -13,7 +13,7 @@ from langchain.chains import RetrievalQA
 import time
 import re
 
-from llm_model import ChatLLM
+from vllm_model import ChatLLM
 from vllm_wrapper import vLLMWrapper
 from rerank_model import reRankLLM
 from faiss_retriever import FaissRetriever
@@ -176,7 +176,7 @@ if __name__ == "__main__":
             # rerank emb recall
             rerank_ans = reRank(rerank, 6, query, bm25_context, faiss_context)
             rerank_inputs = get_rerank(rerank_ans, query)
-            
+
             batch_input = []
             batch_input.append(emb_bm25_merge_inputs)
             batch_input.append(bm25_inputs)

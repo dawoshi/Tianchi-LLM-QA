@@ -1,4 +1,4 @@
-## nlp-tutorial
+## Tianchi-LLM-QA
 
 <p align="center">
   <img width="100" src="https://media-thumbs.golden.com/OLqzmrmwAzY1P7Sl29k2T9WjJdM=/200x200/smart/golden-storage-production.s3.amazonaws.com/topic_images/e08914afa10a4179893eeb07cb5e4713.png" />
@@ -37,7 +37,7 @@
 └── vllm_wrapper.py
 ```
 
-### 赛题概述
+### [赛题概述](https://tianchi.aliyun.com/competition/entrance/532154)
 #### 赛题：基于大模型的文档检索问答
 
 任务：本次比赛要求参赛选手以大模型为中心制作一个问答系统，回答用户的汽车相关问题。参赛选手需要根据问题，在文档中定位相关信息的位置，并根据文档内容通过大模型生成相应的答案。本次比赛涉及的问题主要围绕汽车使用、维修、保养等方面，具体可参考下面的例子：
@@ -72,22 +72,18 @@
 ##### cross-encoder
 
 #### 推理优化
-##### vllm
+##### vllm batch
 ##### tensorRT-LLM
-
+|   model               | cost time  |
+| ----------------------| -----------|
+|flash-attention batch  |            | 
+|   vllm                | 0.7897     |
+| vllm batch            | 17.2       |
+| TensorRT-LLM          | 0.8132     |
 ### 排名
 
 #### 初赛2名
 #### 复赛12名
 
-The overall performance of BERT on **dev**:
 
-|              | Accuracy (entity)  | Recall (entity)    | F1 score (entity)  |
-| ------------ | ------------------ | ------------------ | ------------------ |
-| BERT+Softmax | 0.7897     | 0.8031     | 0.7963    |
-| BERT+CRF     | 0.7977 | 0.8177 | 0.8076 |
-| BERT+Span    | 0.8132 | 0.8092 | 0.8112 |
-| BERT+Span+adv    | 0.8267 | 0.8073 | **0.8169** |
-| BERT-small(6 layers)+Span+kd    | 0.8241 | 0.7839 | 0.8051 |
-| BERT+Span+focal_loss    | 0.8121 | 0.8008 | 0.8064 |
-| BERT+Span+label_smoothing   | 0.8235 | 0.7946 | 0.8088 |
+
