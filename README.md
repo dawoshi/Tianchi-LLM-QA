@@ -51,7 +51,7 @@
 问题3：靠背太热怎么办？
 答案3：您好，如果您的座椅靠背太热，可以尝试关闭座椅加热功能。在多媒体显示屏上依次点击空调开启按键→座椅→加热，在该界面下可以关闭座椅加热。
 
-#### 2.2 2.2 数据(复赛数据官方只提供部分参考样式)
+#### 2.2 数据(复赛数据官方只提供部分参考样式)
 
 [初赛训练数据集.pdf](https://tianchi-race-prod-sh.oss-cn-shanghai.aliyuncs.com/file/race/documents/532154/%E5%88%9D%E8%B5%9B%E8%AE%AD%E7%BB%83%E9%9B%86/%E5%88%9D%E8%B5%9B%E8%AE%AD%E7%BB%83%E6%95%B0%E6%8D%AE%E9%9B%86.pdf?Expires=1703022585&OSSAccessKeyId=LTAI5t7fj2oKqzKgLGz6kGQc&Signature=pg9tnYgHDLkAlfCU%2Bs3h3QBrvfA%3D&response-content-disposition=attachment%3B%20)
 
@@ -110,7 +110,7 @@ bm25召回利用 langchain自带的bm25 retrievers
 
 ##### 3.4.1 vllm batch
 
-vllm 利用page attention 技术是推理速度得到提升，batch推理比普通推理有接近1倍的提升空间
+vllm 利用page attention 技术使推理速度得到提升，batch推理比普通推理有接近1倍的提升空间
 
 ##### 3.4.2 tensorRT-LLM
 
