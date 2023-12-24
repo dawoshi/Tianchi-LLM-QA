@@ -10,7 +10,7 @@ class DataProcess(object):
     def __init__(self, pdf_path):
         self.pdf_path = pdf_path
         self.data = []
-    def SlidingWindow(self, sentences, kernel = 512, stride = 1): 
+    def SlidingWindow(self, sentences, kernel = 512, stride = 1):
         sz = len(sentences)
         cur = ""
         fast = 0
@@ -23,7 +23,7 @@ class DataProcess(object):
                 slow = slow + 1
             cur = cur + sentence + "。"
             fast = fast + 1
-    
+
     def Datafilter(self, line, header, pageid, max_seq = 1024):
 
          sz = len(line)
@@ -94,18 +94,11 @@ class DataProcess(object):
                             continue
                     cursize = line["size"]
                     text = line["text"]
-                    # print(text, cursize)
-                    if(idx == 0):
-                        squence = squence + text
-                        lastsize = cursize
-                        continue
-                    # print(cursize, text)
                     if(text == "□" or text == "•"):
                         continue
                     elif(text== "警告！" or text == "注意！" or text == "说明！"):
                         if(len(squence) > 0):
                             self.Datafilter(squence, header, i, max_seq = max_seq)
-                            # print(squence, len(squence))
                         squence = ""
                     elif(format(lastsize,".5f") == format(cursize,".5f")):
                         if(len(squence)>0):
@@ -119,7 +112,6 @@ class DataProcess(object):
                         else:
                             if(len(squence) > 0):
                                 self.Datafilter(squence, header, i, max_seq = max_seq)
-                                # print(squence, len(squence))
                             squence = text
                 if(len(squence) > 0):
                     self.Datafilter(squence, header, i, max_seq = max_seq)
