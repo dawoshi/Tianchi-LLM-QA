@@ -4,10 +4,9 @@ modelscope
 tiktoken
 pdfplumber
 PdfReader
-pdfplumber
 PyPDF2
 langchain
 jieba
 rank_bm25
 sentence-transformers
-faiss-cpu
+faiss-gpu
